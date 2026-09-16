@@ -25,7 +25,7 @@ function defaultData() {
       { id: 1, nome: 'Renata Oliveira', email: 'renata.oliveira@example.com', telefone: '(86) 91234-0001', area_atuacao: 'Matemática', disponibilidade: 'Terças e quintas à tarde', created_at: now() },
       { id: 2, nome: 'Paulo Henrique', email: 'paulo.henrique@example.com', telefone: '(86) 91234-0002', area_atuacao: 'Língua Portuguesa', disponibilidade: 'Sábados pela manhã', created_at: now() },
       { id: 3, nome: 'Camila Duarte', email: 'camila.duarte@example.com', telefone: '(86) 91234-0003', area_atuacao: 'Inglês', disponibilidade: 'Segundas e quartas à tarde', created_at: now() },
-      { id: 4, nome: 'Vítor Emanuel Pacheco de Sousa', email: 'vitor.sousa@example.com', telefone: '(86) 91234-0004', area_atuacao: 'Informática / Inclusão Digital', disponibilidade: 'Sextas à tarde', created_at: now() }
+      { id: 4, nome: 'Marcos Paulo Araújo', email: 'marcos.araujo@example.com', telefone: '(86) 91234-0004', area_atuacao: 'Informática / Inclusão Digital', disponibilidade: 'Sextas à tarde', created_at: now() }
     ],
     disciplinas: [
       { id: 1, nome: 'Matemática' },

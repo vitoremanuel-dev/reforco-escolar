@@ -4,8 +4,8 @@ services:
     container_name: reforco-db
     restart: unless-stopped
     environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: reforco_escolar
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-reforco_root_pwd}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-reforco_escolar}
     ports:
       - "3306:3306"
     volumes:
@@ -22,9 +22,9 @@ services:
     environment:
       DB_HOST: db
       DB_PORT: 3306
-      DB_USER: root
-      DB_PASSWORD: root
-      DB_NAME: reforco_escolar
+      DB_USER: ${DB_USER:-root}
+      DB_PASSWORD: ${MYSQL_ROOT_PASSWORD:-reforco_root_pwd}
+      DB_NAME: ${MYSQL_DATABASE:-reforco_escolar}
       PORT: 3000
     ports:
       - "3000:3000"

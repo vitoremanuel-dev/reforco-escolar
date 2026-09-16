@@ -470,6 +470,7 @@ Crie um arquivo `.env` (a partir de `.env.example`) para configurar a aplicaçã
 | `DB_USER` | `root` | Usuário do MySQL. |
 | `DB_PASSWORD` | *(vazio)* | Senha do MySQL. |
 | `DB_NAME` | `reforco_escolar` | Nome do banco de dados. |
+| `MYSQL_ROOT_PASSWORD` | `reforco_root_pwd` | Senha usada pelo `docker-compose.yml` (defina um valor forte em produção). |
 
 ---
 

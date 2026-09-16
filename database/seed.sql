@@ -22,7 +22,7 @@ INSERT INTO voluntarios (nome, email, telefone, area_atuacao, disponibilidade) V
   ('Renata Oliveira', 'renata.oliveira@example.com', '(86) 91234-0001', 'Matemática', 'Terças e quintas à tarde'),
   ('Paulo Henrique', 'paulo.henrique@example.com', '(86) 91234-0002', 'Língua Portuguesa', 'Sábados pela manhã'),
   ('Camila Duarte', 'camila.duarte@example.com', '(86) 91234-0003', 'Inglês', 'Segundas e quartas à tarde'),
-  ('Vítor Emanuel Pacheco de Sousa', 'vitor.sousa@example.com', '(86) 91234-0004', 'Informática / Inclusão Digital', 'Sextas à tarde');
+  ('Marcos Paulo Araújo', 'marcos.araujo@example.com', '(86) 91234-0004', 'Informática / Inclusão Digital', 'Sextas à tarde');
 
 -- Atividades
 INSERT INTO atividades (titulo, descricao, disciplina_id, voluntario_id, data, horario, status) VALUES
