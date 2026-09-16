@@ -8,3 +8,6 @@ data/
 # Logs e SO
 *.log
 .DS_Store
+
+# Documento de metodologia (uso pessoal, não versionado)
+METODOLOGIA.md
