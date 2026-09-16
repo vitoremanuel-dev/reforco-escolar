@@ -1,4 +1,4 @@
-USE reforco_escolar;
+USE educabairro;
 
 -- Disciplinas
 INSERT INTO disciplinas (nome) VALUES

@@ -209,7 +209,7 @@ async function init() {
     port: Number(process.env.DB_PORT) || 3306,
     user: process.env.DB_USER || 'root',
     password: process.env.DB_PASSWORD || '',
-    database: process.env.DB_NAME || 'reforco_escolar',
+    database: process.env.DB_NAME || 'educabairro',
     connectTimeout: 2500,
     waitForConnections: true,
     connectionLimit: 10,

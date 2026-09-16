@@ -1,7 +1,7 @@
 {
-  "name": "reforco-escolar",
+  "name": "educabairro",
   "version": "1.0.0",
-  "description": "Plataforma Web de Reforço Escolar e Capacitação de Voluntários para a Comunidade (Atividades Extensionistas - UNINTER)",
+  "description": "EducaBairro - Plataforma Web de Reforço Escolar e Capacitação de Voluntários para a Comunidade (Atividades Extensionistas - UNINTER)",
   "main": "server/index.js",
   "type": "commonjs",
   "scripts": {

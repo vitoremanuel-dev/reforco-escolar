@@ -1,9 +1,9 @@
-# Banco de dados da Plataforma de Reforço Escolar
-CREATE DATABASE IF NOT EXISTS reforco_escolar
+# Banco de dados da plataforma EducaBairro
+CREATE DATABASE IF NOT EXISTS educabairro
   CHARACTER SET utf8mb4
   COLLATE utf8mb4_unicode_ci;
 
-USE reforco_escolar;
+USE educabairro;
 
 CREATE TABLE IF NOT EXISTS alunos (
   id INT AUTO_INCREMENT PRIMARY KEY,

@@ -1,10 +1,11 @@
-# Plataforma Web de Reforço Escolar — Bairro Uruguai
+# EducaBairro
 
 > **Trabalho Final — Atividades Extensionistas** · CST em Análise e Desenvolvimento
 > de Sistemas (UNINTER)
 >
-> **Projeto:** *Plataforma Web de Reforço Escolar e Capacitação de Voluntários para
-> a Comunidade* — Associação de Moradores do Bairro Uruguai, Teresina/PI.
+> **Projeto:** *EducaBairro — Plataforma Web de Reforço Escolar e Capacitação de
+> Voluntários para a Comunidade* — Associação de Moradores do Bairro Uruguai,
+> Teresina/PI.
 >
 > **Objetivo de Desenvolvimento Sustentável:** ODS 04 — Educação de Qualidade.
 
@@ -125,7 +126,7 @@ sequenceDiagram
 ## Estrutura do projeto
 
 ```
-reforco-escolar/
+educabairro/
 ├── server/
 │   ├── index.js          # Aplicação Express + definição das rotas da API
 │   └── store.js          # Camada de dados (MySQL) com fallback para arquivo
@@ -469,8 +470,8 @@ Crie um arquivo `.env` (a partir de `.env.example`) para configurar a aplicaçã
 | `DB_PORT` | `3306` | Porta do MySQL. |
 | `DB_USER` | `root` | Usuário do MySQL. |
 | `DB_PASSWORD` | *(vazio)* | Senha do MySQL. |
-| `DB_NAME` | `reforco_escolar` | Nome do banco de dados. |
-| `MYSQL_ROOT_PASSWORD` | `reforco_root_pwd` | Senha usada pelo `docker-compose.yml` (defina um valor forte em produção). |
+| `DB_NAME` | `educabairro` | Nome do banco de dados. |
+| `MYSQL_ROOT_PASSWORD` | `educabairro_root_pwd` | Senha usada pelo `docker-compose.yml` (defina um valor forte em produção). |
 
 ---
 
@@ -479,5 +480,5 @@ Crie um arquivo `.env` (a partir de `.env.example`) para configurar a aplicaçã
 - **Produção com banco:** defina as variáveis de ambiente apontando para um MySQL
   real e execute `npm start` (idealmente sob um gerenciador de processos como `pm2`).
 - **Contêineres:** `docker compose up --build -d` sobe a aplicação e o banco.
-- **Persistência:** o volume `reforco_data` (definido no `docker-compose.yml`)
+- **Persistência:** o volume `educabairro_data` (definido no `docker-compose.yml`)
   preserva os dados do MySQL entre reinicializações.

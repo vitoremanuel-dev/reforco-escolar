@@ -161,6 +161,6 @@ let store;
 init().then((s) => {
   store = s;
   app.listen(PORT, () => {
-    console.log(`Plataforma de Reforço Escolar rodando em http://localhost:${PORT} (backend: ${store.backend})`);
+    console.log(`EducaBairro rodando em http://localhost:${PORT} (backend: ${store.backend})`);
   });
 });

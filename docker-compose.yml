@@ -1,21 +1,21 @@
 services:
   db:
     image: mysql:8.0
-    container_name: reforco-db
+    container_name: educabairro-db
     restart: unless-stopped
     environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-reforco_root_pwd}
-      MYSQL_DATABASE: ${MYSQL_DATABASE:-reforco_escolar}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-educabairro_root_pwd}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-educabairro}
     ports:
       - "3306:3306"
     volumes:
       - ./database/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
       - ./database/seed.sql:/docker-entrypoint-initdb.d/02-seed.sql:ro
-      - reforco_data:/var/lib/mysql
+      - educabairro_data:/var/lib/mysql
 
   app:
     build: .
-    container_name: reforco-app
+    container_name: educabairro-app
     restart: unless-stopped
     depends_on:
       - db
@@ -23,11 +23,11 @@ services:
       DB_HOST: db
       DB_PORT: 3306
       DB_USER: ${DB_USER:-root}
-      DB_PASSWORD: ${MYSQL_ROOT_PASSWORD:-reforco_root_pwd}
-      DB_NAME: ${MYSQL_DATABASE:-reforco_escolar}
+      DB_PASSWORD: ${MYSQL_ROOT_PASSWORD:-educabairro_root_pwd}
+      DB_NAME: ${MYSQL_DATABASE:-educabairro}
       PORT: 3000
     ports:
       - "3000:3000"
 
 volumes:
-  reforco_data:
+  educabairro_data:
