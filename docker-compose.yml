@@ -1,0 +1,33 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: reforco-db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: reforco_escolar
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+      - ./database/seed.sql:/docker-entrypoint-initdb.d/02-seed.sql:ro
+      - reforco_data:/var/lib/mysql
+
+  app:
+    build: .
+    container_name: reforco-app
+    restart: unless-stopped
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_USER: root
+      DB_PASSWORD: root
+      DB_NAME: reforco_escolar
+      PORT: 3000
+    ports:
+      - "3000:3000"
+
+volumes:
+  reforco_data:

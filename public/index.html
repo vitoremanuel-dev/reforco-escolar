@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reforço Escolar — Bairro Uruguai</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">
+      <span class="brand-icon">📚</span>
+      <div>
+        <strong>Reforço Escolar</strong>
+        <small>Bairro Uruguai · Teresina/PI</small>
+      </div>
+    </div>
+    <nav>
+      <a href="#dashboard" class="nav-link active" data-view="dashboard">🏠 Dashboard</a>
+      <a href="#alunos" class="nav-link" data-view="alunos">🎒 Alunos</a>
+      <a href="#voluntarios" class="nav-link" data-view="voluntarios">🙋 Voluntários</a>
+      <a href="#atividades" class="nav-link" data-view="atividades">📅 Atividades</a>
+      <a href="#progressos" class="nav-link" data-view="progressos">📈 Progresso</a>
+      <a href="#kanban" class="nav-link" data-view="kanban">🗂️ Quadro Kanban</a>
+    </nav>
+    <div class="sidebar-footer">
+      <p>Atividades Extensionistas</p>
+      <p>ODS 04 — Educação de Qualidade</p>
+    </div>
+  </aside>
+
+  <main class="content">
+    <section id="view-dashboard" class="view"></section>
+    <section id="view-alunos" class="view"></section>
+    <section id="view-voluntarios" class="view"></section>
+    <section id="view-atividades" class="view"></section>
+    <section id="view-progressos" class="view"></section>
+    <section id="view-kanban" class="view"></section>
+  </main>
+
+  <div id="modal" class="modal" hidden>
+    <div class="modal-card">
+      <div class="modal-head">
+        <h3 id="modal-title"></h3>
+        <button class="btn-close" data-close-modal>&times;</button>
+      </div>
+      <form id="modal-form" class="modal-body"></form>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" hidden></div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

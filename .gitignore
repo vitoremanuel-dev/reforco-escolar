@@ -1,0 +1,10 @@
+# Dependências
+node_modules/
+
+# Banco local (fallback) e segredos
+data/
+.env
+
+# Logs e SO
+*.log
+.DS_Store
