@@ -244,10 +244,10 @@ automaticamente o modo **arquivo**:
 
 ```mermaid
 flowchart TD
-    START([Início: init()]) --> TRY{Tenta conectar<br/>ao MySQL}
+    START(["Início: init()"]) --> TRY{"Tenta conectar ao MySQL"}
     TRY -->|sucesso| MYSQL["Backend MySQL<br/>(consultas SQL via mysql2)"]
     TRY -->|falha| FILE["Backend Arquivo<br/>(data/db.json)"]
-    MYSQL --> SERVE[Servidor inicia]
+    MYSQL --> SERVE["Servidor inicia"]
     FILE --> SERVE
 ```
 
